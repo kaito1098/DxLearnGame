@@ -153,11 +153,16 @@
   <ItemGroup>
     <ClCompile Include="GameGlobal.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="InputUtility.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameGlobal.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="KeyInput.h" />
+    <ClInclude Include="InputUtility.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

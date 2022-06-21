@@ -2,7 +2,8 @@
 #include "GameGlobal.h"
 
 GameManager::GameManager() :
-	frameCount(0)
+	frameCount(0),
+	player()
 {
 }
 
@@ -23,15 +24,16 @@ void GameManager::run() {
 
 //・初期フレーム処理
 void GameManager::init() {
-	//TODO
+	player.update();
+	player.draw();
 }
 
 //・毎フレーム更新処理
 void GameManager::update() {
-	//TODO
+	player.update();
 }
 
 //・毎フレーム描画処理
 void GameManager::draw() {
-	//TODO
+	player.draw();
 }

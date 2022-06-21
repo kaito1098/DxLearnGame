@@ -1,4 +1,5 @@
 #include "GameGlobal.h"
+#include "GameManager.h"
 
 int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPSTR lpCmdLine, _In_ int nCmdShow)
 {
@@ -11,6 +12,7 @@ int WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 		return -1;	//DXƒ‰ƒCƒuƒ‰ƒŠ‚Ì‰Šú‰»¸”s
 	}
 
+	GameManager gameManager;
 	gameManager.run();
 
 	DxLib_End();
