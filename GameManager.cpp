@@ -1,5 +1,5 @@
-#include "GameManager.h"
 #include "GameGlobal.h"
+#include "GameManager.h"
 
 GameManager::GameManager() :
 	frameCount(0),

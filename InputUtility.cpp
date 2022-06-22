@@ -1,3 +1,4 @@
+#include "GameGlobal.h"
 #include "InputUtility.h"
 
 InputUtility::InputUtility(int _keyCode) :

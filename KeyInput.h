@@ -1,4 +1,5 @@
 #pragma once
+#include "GameGlobal.h"
 #include "InputUtility.h"
 
 //・入力を受け付けるキーを管理
