@@ -1,5 +1,6 @@
 #include "GameGlobal.h"
 #include "GameManager.h"
+#include "EnemyStalker.h"
 
 GameManager::GameManager() :
 	frameCount(0),
@@ -15,6 +16,7 @@ void GameManager::run() {
 	while (ProcessMessage() == 0) {
 		ClearDrawScreen();
 
+		frameCount++;
 		update();
 		draw();
 
@@ -30,10 +32,14 @@ void GameManager::init() {
 
 //・毎フレーム更新処理
 void GameManager::update() {
+	//・一定間隔で敵を出現させる
+	if (frameCount % 300 == 0) enemyManager.add(std::make_shared<EnemyStalker>(100, 100));
 	player.update();
+	enemyManager.update();
 }
 
 //・毎フレーム描画処理
 void GameManager::draw() {
 	player.draw();
+	enemyManager.draw();
 }

@@ -11,10 +11,14 @@ Player::Player() :
 
 //・プレイヤーの位置情報更新（キー入力による制御）
 void Player::update() {
-	if (KeyInput::KeyInputRight.onPressed()) x += speed;
-	if (KeyInput::KeyInputLeft.onPressed()) x -= speed;
-	if (KeyInput::KeyInputDown.onPressed()) y += speed;
-	if (KeyInput::KeyInputUp.onPressed()) y -= speed;
+	int dx = 0, dy = 0;
+	if (KeyInput::KeyInputRight.onPressed()) dx += 1;
+	if (KeyInput::KeyInputLeft.onPressed()) dx -= 1;
+	if (KeyInput::KeyInputDown.onPressed()) dy += 1;
+	if (KeyInput::KeyInputUp.onPressed()) dy -= 1;
+	auto moveVector = vector2dNormalize(std::array<int, 2> {dx, dy}, speed);
+	x += moveVector[0];
+	y += moveVector[1];
 	//・プレイヤーが画面外に出ないよう位置を調整
 	if (x < radius) x = radius;
 	if (x > SCREEN_WIDTH - radius) x = SCREEN_WIDTH - radius;
