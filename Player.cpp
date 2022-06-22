@@ -1,10 +1,12 @@
+#include "GameGlobal.h"
 #include "Player.h"
 #include "KeyInput.h"
 
 Player::Player() :
 	color(COLOR_BLUE), radius(20), speed(5),
-	x(SCREEN_WIDTH / 2), y(SCREEN_WIDTH / 8 * 7)
+	x(SCREEN_WIDTH / 2)
 {
+	y = SCREEN_HEIGHT - radius * 3;
 }
 
 //・プレイヤーの位置情報更新（キー入力による制御）
