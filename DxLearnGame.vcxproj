@@ -151,6 +151,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EnemyBase.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="EnemyStalker.cpp" />
     <ClCompile Include="GameGlobal.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="InputUtility.cpp" />
@@ -158,6 +161,9 @@
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EnemyBase.h" />
+    <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="EnemyStalker.h" />
     <ClInclude Include="GameGlobal.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="KeyInput.h" />

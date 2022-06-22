@@ -18,3 +18,8 @@ extern const int COLOR_BLUE;
 extern const int COLOR_YELLOW;
 extern const int COLOR_PURPLE;
 extern const int COLOR_CYAN;
+
+//・グローバル関数
+std::array<int, 2> vector2dNormalize(std::array<int, 2>, int = 1);
+std::array<int, 2> vector2dSub(std::array<int, 2>, std::array<int, 2>);
+int roundInt(double);
