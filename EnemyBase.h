@@ -2,9 +2,13 @@
 
 class EnemyBase {
 public:
-	EnemyBase(int, int);
-	virtual void update() = 0;
-	virtual void draw() = 0;
+	bool isDead;
+	EnemyBase(int x, int y, int radius, int color, int speed, int hp, int score);
+	virtual void update();
+	void draw();
+	void takeDamage(int damage);
+	std::array<int, 2> getPosition();
+	int getRadius();
 protected:
-	int x, y;
+	int x, y, radius, color, speed, hp, score;
 };

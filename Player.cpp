@@ -24,6 +24,10 @@ void Player::update() {
 	if (x > SCREEN_WIDTH - radius) x = SCREEN_WIDTH - radius;
 	if (y < radius) y = radius;
 	if (y > SCREEN_HEIGHT - radius) y = SCREEN_HEIGHT - radius;
+	//・ショット
+	if (KeyInput::KeyInputZ.onPressedOnce()) {
+		gameManager.playerBulletManager.add(std::make_shared<PlayerBullet>(x, y - radius));
+	}
 }
 
 //・プレイヤーの描画処理
@@ -35,4 +39,8 @@ void Player::draw() {
 std::array<int, 2> Player::getPosition() {
 	std::array<int, 2> xPosition{ x, y };
 	return xPosition;
+}
+
+int Player::getRadius() {
+	return radius;
 }

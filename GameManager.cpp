@@ -36,10 +36,12 @@ void GameManager::update() {
 	if (frameCount % 300 == 0) enemyManager.add(std::make_shared<EnemyStalker>(100, 100));
 	player.update();
 	enemyManager.update();
+	playerBulletManager.update();
 }
 
 //E–ˆƒtƒŒ[ƒ€•`‰æˆ—
 void GameManager::draw() {
 	player.draw();
 	enemyManager.draw();
+	playerBulletManager.draw();
 }

@@ -2,8 +2,7 @@
 #include "EnemyStalker.h"
 
 EnemyStalker::EnemyStalker(int _x, int _y) :
-	EnemyBase(_x, _y),
-	color(COLOR_RED), radius(20), speed(2)
+	EnemyBase(_x, _y, 20, COLOR_RED, 2, 30, 50)
 {
 }
 
@@ -14,8 +13,5 @@ void EnemyStalker::update() {
 		x += moveVector[0];
 		y += moveVector[1];
 	}
-}
-
-void EnemyStalker::draw() {
-	DrawCircle(x, y, radius, color);
+	EnemyBase::update();
 }

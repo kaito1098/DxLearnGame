@@ -38,3 +38,9 @@ int roundInt(double num) {
 	double absNum = abs(num);
 	return (int)(absNum + 0.5) * (isMinus ? -1 : 1);
 }
+
+//E‚Q‚Â‚Ì‰~‚ÌÕ“Ë”»’è
+bool checkHitCircles(std::array<int, 2> vector2d, int ar, int br) {
+	int len = ar + br;
+	return sqrt(pow(vector2d[0], 2) + pow(vector2d[1], 2)) <= len;
+}
