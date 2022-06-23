@@ -4,8 +4,5 @@
 class EnemyStalker : public EnemyBase {
 public:
 	EnemyStalker(int, int);
-	void update();
-	void draw();
-private:
-	const int color, radius, speed;
+	void update() override;
 };

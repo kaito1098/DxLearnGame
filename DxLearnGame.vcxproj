@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BulletBase.cpp" />
     <ClCompile Include="EnemyBase.cpp" />
     <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="EnemyStalker.cpp" />
@@ -159,8 +160,11 @@
     <ClCompile Include="InputUtility.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerBullet.cpp" />
+    <ClCompile Include="PlayerBulletManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BulletBase.h" />
     <ClInclude Include="EnemyBase.h" />
     <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="EnemyStalker.h" />
@@ -169,6 +173,8 @@
     <ClInclude Include="KeyInput.h" />
     <ClInclude Include="InputUtility.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerBullet.h" />
+    <ClInclude Include="PlayerBulletManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

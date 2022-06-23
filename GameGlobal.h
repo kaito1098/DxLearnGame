@@ -23,3 +23,4 @@ extern const int COLOR_CYAN;
 std::array<int, 2> vector2dNormalize(std::array<int, 2>, int = 1);
 std::array<int, 2> vector2dSub(std::array<int, 2>, std::array<int, 2>);
 int roundInt(double);
+bool checkHitCircles(std::array<int, 2> vector2d, int ar, int br);

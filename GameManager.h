@@ -3,6 +3,7 @@
 #include <memory>
 #include "Player.h"
 #include "EnemyManager.h"
+#include "PlayerBulletManager.h"
 
 class GameManager {
 public:
@@ -10,6 +11,7 @@ public:
 	GameManager();
 	Player player;
 	EnemyManager enemyManager;
+	PlayerBulletManager playerBulletManager;
 	void run();
 private:
 	void init();
