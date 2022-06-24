@@ -17,4 +17,5 @@ private:
 	void init();
 	void update();
 	void draw();
+	std::array<int, 2> getRandomPosition();
 };
